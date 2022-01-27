@@ -12,7 +12,16 @@ filetype on " filetype check
 filetype plugin on " filetype plugin load
 filetype indent on " filetype indent configuration file load
 set nofoldenable
+set t_ut=
 set termguicolors
+
+if has("termguicolors")
+    let t_8f = "[38;2;%lu;%lu;%lum"
+    let t_8b = "[48;2;%lu;%lu;%lum"
+    
+    set termguicolors
+endif
+
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
 set ambiwidth=double
